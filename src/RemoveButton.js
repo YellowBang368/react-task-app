@@ -7,6 +7,7 @@ const Container = styled.h2`
   top: 10px;
   right: 10px;
   font-size: 14px;
+  display: none;
 `;
 
 export default class RemoveButton extends React.Component {

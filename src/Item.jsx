@@ -8,7 +8,9 @@ const Container = styled.div`
   position: relative;
   padding: 10px 4px;
   margin-top: 6px;
-  border: 1px solid #eee;
+  border-radius: 3px;
+  box-shadow: 0px 3px 8px 0 #c4c4c4;
+  text-overflow: hidden;
   background-color: ${props => props.isActive ? "white" : "lightgreen"};
 `;
 

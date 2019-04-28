@@ -12,13 +12,8 @@ const initialList = {
       title: 'To do',
       items: ['item-1', 'item-2'],
     },
-    'list-2': {
-      id: 'list-2',
-      title: 'To buy',
-      items: ['item-3', 'item-4', 'item-5'],
-    },
   },
-  listOrder: ['list-1', 'list-2'],
+  listOrder: ['list-1'],
 }
 
 export default initialList;

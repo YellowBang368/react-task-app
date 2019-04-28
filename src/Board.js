@@ -3,11 +3,14 @@ import initialList from './initialList';
 import { DragDropContext } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 import List from './List';
-import NewList from './listform';
+import AddListButton from './addListButton'
 
 const Container = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  height: 100%;
+
 `;
 
 class Board extends React.Component {
@@ -111,6 +114,7 @@ class Board extends React.Component {
       [newItemId]: {
         id: newItemId,
         content: itemContent,
+        active: true,
       }
     }
 
@@ -186,8 +190,8 @@ class Board extends React.Component {
                 changeItemStatus={this.changeItemStatus}
               />
             )})}
+            <AddListButton addNewList={this.addNewList} />
         </Container>
-        <NewList addNewList={this.addNewList} />
       </DragDropContext>
     )
   }

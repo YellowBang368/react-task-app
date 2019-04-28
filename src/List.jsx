@@ -11,9 +11,13 @@ const Container = styled.div`
   flex-direction: column;
   width: 400px;
   border-radius: 3;
-  border: 1px solid #eee;
   margin: 0 10px;
   padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px 0px #c4c4c4;
+  padding-top: 25px;
+  padding-bottom: 15px;
 `;
 
 const ItemList = styled.div`
@@ -28,6 +32,10 @@ export default class List extends React.Component {
     return (
       <Container>
         <Title>{this.props.list.title}</Title>
+        <NewItem
+          addNewItem={this.props.addNewItem}
+          listId={this.props.list.id}
+        />
         <Droppable droppableId={this.props.list.id}>
         {(provided, snapshot) => (
           <ItemList
@@ -51,10 +59,6 @@ export default class List extends React.Component {
         </ItemList>
         )}
         </Droppable>
-        <NewItem
-          addNewItem={this.props.addNewItem}
-          listId={this.props.list.id}
-        />
         <RemoveButton remove={this.props.removeList} id={this.props.list.id}/>
       </Container>
     )

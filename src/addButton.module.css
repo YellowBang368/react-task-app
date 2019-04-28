@@ -1,0 +1,34 @@
+.plus {
+	border: 2px solid lightgrey;
+	background-color: #fff;
+	font-size: 16px;
+	height: 2.5em;
+	width: 2.5em;
+	border-radius: 999px;
+	position: relative;
+	font-size: 26px;
+	cursor: pointer;
+	outline: none;
+  margin: 0 10px;
+}
+
+.plus:after,
+.plus:before {
+	content: "";
+	display: block;
+	background-color: grey;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.plus:before {
+	height: 1em;
+	width: 0.2em;
+}
+
+.plus:after {
+	height: 0.2em;
+	width: 1em;
+}
