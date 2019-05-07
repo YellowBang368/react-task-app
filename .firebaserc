@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "azrv-task-app",
+    "task-app": "azrv-task-react"
+  }
+}

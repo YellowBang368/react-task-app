@@ -10,7 +10,7 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   height: 100%;
-
+  margin-left: 80px;
 `;
 
 class Board extends React.Component {
@@ -141,7 +141,7 @@ class Board extends React.Component {
     this.setState(newState);
   }
 
-  removeList = listId => {
+  removeList = (listId, itemId) => {
     // TODO:
     // It doesn't delete from state
     const newListOrder = this.state.listOrder.filter(currentListId => {
@@ -154,8 +154,26 @@ class Board extends React.Component {
     this.setState(newState)
   }
 
-  removeItem = itemId => {
-    // TODO
+  removeItem = (listId, itemId) => {
+    console.log("remove " + itemId + " from " + listId);
+    const newItems = this.state.lists[listId].items.filter(currentItemId => {
+      return currentItemId !== itemId
+    })
+
+    const newState = {
+      ...this.state,
+      lists: {
+        ...this.state.lists,
+        [listId]: {
+          ...this.state.lists[listId],
+          items: newItems,
+        }
+      },
+      items: {
+        ...this.state.items,
+      }
+    }
+    this.setState(newState)
   }
 
   changeItemStatus = (itemId, newStatus) => {

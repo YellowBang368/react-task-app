@@ -9,7 +9,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 400px;
+  width: 340px;
   border-radius: 3;
   margin: 0 10px;
   padding: 10px;
@@ -23,6 +23,7 @@ const Container = styled.div`
 const ItemList = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 40px;
 `;
 
 const Title = styled.h3``;
@@ -47,6 +48,7 @@ export default class List extends React.Component {
             return (
               <Item
                 key={item.id}
+                listId={this.props.list.id}
                 item={item}
                 index={index}
                 remove={this.props.removeItem}
@@ -59,7 +61,7 @@ export default class List extends React.Component {
         </ItemList>
         )}
         </Droppable>
-        <RemoveButton remove={this.props.removeList} id={this.props.list.id}/>
+        <RemoveButton remove={this.props.removeList} listId={this.props.list.id}/>
       </Container>
     )
   }

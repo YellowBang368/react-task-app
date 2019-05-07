@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "animejs": "^3.0.1",
+    "classnames": "^2.2.6",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.0",
     "react-dom": "^16.8.6",
     "react-scripts": "2.1.8",
+    "react-spring": "^9.0.0-beta.6",
     "react-svg": "^9.0.3",
+    "react-transition-group": "^4.0.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {

@@ -1,23 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import buttonStyles from './removeButton.module.css'
 
-const Container = styled.h2`
-  color: red;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 14px;
-  display: none;
-`;
+const Container = styled.h2``;
 
 export default class RemoveButton extends React.Component {
   handleClick = () => {
-    this.props.remove(this.props.id);
+    this.props.remove(this.props.listId, this.props.itemId);
   }
 
   render() {
     return (
-      <Container onClick={this.handleClick}>X</Container>
+      <Container className={buttonStyles.close} onClick={this.handleClick}/>
     )
   }
 }
