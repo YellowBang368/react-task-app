@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components'
-import Board from './Board'
-import Sidebar from './Sidebar'
+import Board from './components/Board'
+import Sidebar from './components/Sidebar'
 
 const Container = styled.div`
   display: block;

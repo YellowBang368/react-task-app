@@ -1,6 +1,6 @@
 import React from 'react';
-import buttonStyles from './addButton.module.css';
-import NewList from './listform';
+import buttonStyles from './../css/addButton.module.css';
+import NewList from './Listform';
 
 export default class AddListButton extends React.Component {
   constructor (props) {

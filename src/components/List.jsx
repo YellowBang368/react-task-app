@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Droppable } from 'react-beautiful-dnd';
 import Item from './Item'
-import NewItem from './itemform';
+import NewItem from './Itemform';
 import RemoveButton from './RemoveButton';
 
 const Container = styled.div`

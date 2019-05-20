@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './sidebar.module.css'
+import styles from './../css/sidebar.module.css'
 import classNames from 'classnames/bind';
 
 let cx = classNames.bind(styles);

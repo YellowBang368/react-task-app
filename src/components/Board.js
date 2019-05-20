@@ -1,9 +1,9 @@
 import React from 'react';
-import initialList from './initialList';
+import initialList from './../initialData/initialList';
 import { DragDropContext } from 'react-beautiful-dnd';
 import styled from 'styled-components';
 import List from './List';
-import AddListButton from './addListButton'
+import AddListButton from './AddListButton'
 
 const Container = styled.div`
   display: flex;
