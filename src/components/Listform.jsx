@@ -1,4 +1,5 @@
 import React from 'react';
+import listFormStyles from './../css/listform.module.css'
 
 export default class NewList extends React.Component {
   constructor(props) {
@@ -21,14 +22,15 @@ export default class NewList extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className={listFormStyles.form} onSubmit={this.handleSubmit}>
         <input
+          className={listFormStyles.input}
           type="text"
           placeholder="listName"
           value={this.state.listName}
           onChange={this.handleListNameChange}
         />
-        <button onClick={() =>
+        <button className={listFormStyles.button} onClick={() =>
           this.props.addNewList(this.state.listName)
         }>Create new list</button>
       </form>

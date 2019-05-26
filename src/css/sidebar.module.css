@@ -14,6 +14,9 @@
 .sidebar {
   height: 100%;
   width: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #4d5259;
   transition: all 0.5s ease;
   z-index: 1;

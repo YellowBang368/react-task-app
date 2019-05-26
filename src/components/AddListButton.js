@@ -10,7 +10,7 @@ export default class AddListButton extends React.Component {
     }
   }
 
-  handleClick = () => {
+  handleClick = (elem) => {
     this.setState({
       isClicked: true,
     })

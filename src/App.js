@@ -1,11 +1,19 @@
 import React from 'react';
 import styled from 'styled-components'
 import Board from './components/Board'
-import Sidebar from './components/Sidebar'
 
 const Container = styled.div`
   display: block;
   position: relative;
+`;
+
+const GithubLabel = styled.img`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: auto;
+  height: 30px;
+  cursor: pointer;
 `;
 
 export default class App extends React.Component {
@@ -19,8 +27,10 @@ export default class App extends React.Component {
   render () {
     return (
       <Container>
-        <Sidebar />
         <Board />
+        <a href="https://github.com/azrv/react-task-app">
+          <GithubLabel src={ require('./images/github_black.png') } />
+        </a>
       </Container>
     )
   }
